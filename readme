@@ -1,0 +1,8 @@
+*Ubuntu ec2
+*Aws cli
+*Vim aws-resource.sh, enter script-save
+*Chmod 777 aws-resource.sh
+*./aws-resource.sh | more //to read in better way
+*On top of script inside vim add “set -x” -to run script in debug mode ie, while running it will describe which cmd is run step by step- easy readable for users
+*Again, this has clumsy output, so we use Json passer(jq)to retrieve only particular info ie, for each ec2 , I tell only show the instance ID and no other clumsy data-(p5),
+when writing jq -see last line- my instance id is inside reservations and then inside instances(don’t bother groups bcs instances is not inside groups, both instances and groups are in same level), why [], bcs multiple instances will be there, each instance is enclosed within []
