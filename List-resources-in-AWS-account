@@ -1,0 +1,21 @@
+#!bin/bash
+
+#####
+#Author: Alagappan
+#Date: 05th-Dec
+# 
+#Version: V1
+# 
+#This script will list the AWS resource usage 
+##### 
+#List s3 buckets
+echo “Print list of s3 Buckets”
+aws s3 ls
+
+#List ec2 instances
+echo “Print list of ec2 instances”
+aws ec2 describe-instances
+
+#List IAM users
+echo “Print IAM users”
+aws iam list-users
